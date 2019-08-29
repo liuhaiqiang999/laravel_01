@@ -11,7 +11,7 @@
             <nav class="nav navbar-nav nav-collapse" role="navigation" id="Hui-navbar">
                 <ul class="cl f-r col-lg-8">
                     <li><a href="{{route('/')}}">首页</a></li>
-                    <li><a href="/">登录</a></li>
+                    <li><a href="{{route('login')}}">登录</a></li>
                     <li><a href="{{route('help')}}">帮助</a></li>
                     <li><a href="{{asset(route('about'))}}">关于</a></li>
                 </ul>
