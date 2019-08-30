@@ -9,6 +9,8 @@
         <input type="text" name="name" value="{{old('name')}}"><br>
         密码:<br>
         <input type="text" name="password" value="{{old('password')}}"><br><br>
+        记住我:<br>
+        <input type="checkbox" value="1" name="remember">
         <input type="submit" value="提交">
     </form>
 @stop

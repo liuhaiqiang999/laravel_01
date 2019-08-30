@@ -11,9 +11,18 @@
             <nav class="nav navbar-nav nav-collapse" role="navigation" id="Hui-navbar">
                 <ul class="cl f-r col-lg-8">
                     <li><a href="{{route('/')}}">首页</a></li>
+                    @if (Auth::check())
+                        <li>ID是{{Auth::user()->id}}</li>
+                        <li>名字{{Auth::user()->name}}</li>
+                        <li><a href="{{route('logout')}}">退出登陆</a></li>
+                        <li><a href="{{route('users.edit',['id'=>Auth::id()])}}">修改资料</a></li>
+                        <li><a href="{{route('logout')}}">用户列表</a></li>
+                    @else
                     <li><a href="{{route('login')}}">登录</a></li>
+                    @endif
                     <li><a href="{{route('help')}}">帮助</a></li>
                     <li><a href="{{asset(route('about'))}}">关于</a></li>
+
                 </ul>
             </nav>
         </div>
